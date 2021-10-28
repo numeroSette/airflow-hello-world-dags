@@ -11,7 +11,6 @@ def print_hello():
     headers = {'idRequisicao': '123456'}
     r = requests.post(url, data=json.dumps(body), headers=headers)
   
-
 args = {
     'owner': 'Lucas Baiao & Sette',
     'depends_on_past': False,
