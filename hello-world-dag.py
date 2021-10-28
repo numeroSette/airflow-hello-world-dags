@@ -8,7 +8,7 @@ import json
 def print_hello():
     url = 'http://bkf-onboarding.backoffice.svc.cluster.local:8090/bmais-backoffice/v1/onboardings/job-pendencias-rfb/iniciar'
     body = {'name': 'Maryja'}
-    headers = {'idRequisicao': '7777777777777777777777'}
+    headers = {'idRequisicao': '77777'}
     r = requests.post(url, data=json.dumps(body), headers=headers)
   
 args = {
