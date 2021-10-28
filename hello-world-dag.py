@@ -2,9 +2,16 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.python_operator import PythonOperator
+import requests
+import json
 
 def print_hello():
-    print("Hello World")
+    url = 'http://bkf-onboarding.backoffice.svc.cluster.local:8090/bmais-backoffice/v1/onboardings/job-pendencias-rfb/iniciar'
+    body = {'name': 'Maryja'}
+    headers = {'idRequisicao': '123456'}
+
+    r = requests.post(url, data=json.dumps(body), headers=headers)
+  
 
 args = {
     'owner': 'Lucas Baiao & Sette',
