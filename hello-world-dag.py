@@ -2,15 +2,9 @@ from datetime import datetime, timedelta
 from airflow import DAG
 from airflow.operators.dummy_operator import DummyOperator
 from airflow.operators.python_operator import PythonOperator
-import sys
 
 def print_hello():
-    sys.stdout = open("test.txt", "w")
-
     print("Hello World")
-
-    sys.stdout.close()
-    return 'Hello world!'
 
 args = {
     'owner': 'Lucas Baiao & Sette',
