@@ -10,6 +10,7 @@ def print_hello():
     body = {'name': 'Maryja'}
     headers = {'idRequisicao': '77777'}
     r = requests.post(url, data=json.dumps(body), headers=headers)
+    print(r.content)
   
 args = {
     'owner': 'Lucas Baiao & Sette',
